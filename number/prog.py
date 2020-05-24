@@ -11,3 +11,14 @@ def is_prime(x):
             return False
         i += 2
     return True
+
+
+def count_div(x, mod):
+    cnt = 0
+    r = 0
+    while r == 0:
+        x, r = divmod(x, mod)
+        if r == 0:
+            cnt += 1
+
+    return cnt
