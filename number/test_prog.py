@@ -29,3 +29,13 @@ def test_is_prime(x, expected):
 )
 def test_count_div(x, mod, expected):
     assert prog.count_div(x, mod) == expected
+
+
+@pytest.mark.parametrize(
+    ('x', 'expected'),
+    (
+        (6, [1, 2, 3, 6]),
+    ),
+)
+def test_make_divisors(x, expected):
+    assert prog.make_divisors(x) == expected

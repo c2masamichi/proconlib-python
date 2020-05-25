@@ -22,3 +22,15 @@ def count_div(x, mod):
             cnt += 1
 
     return cnt
+
+
+def make_divisors(x):
+    divisor = [1, x]
+    i = 2
+    while i * i <= x:
+        q, r = divmod(x, i)
+        if r == 0:
+            divisor.append(i)
+            divisor.append(q)
+        i += 1
+    return sorted(divisor)
