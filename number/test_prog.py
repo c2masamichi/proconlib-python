@@ -27,8 +27,8 @@ def test_is_prime(x, expected):
         (48, 2, 4),
     ),
 )
-def test_count_div(x, mod, expected):
-    assert prog.count_div(x, mod) == expected
+def test_make_factors(x, mod, expected):
+    assert prog.make_factors(x, mod) == expected
 
 
 @pytest.mark.parametrize(

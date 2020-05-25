@@ -13,7 +13,7 @@ def is_prime(x):
     return True
 
 
-def count_div(x, mod):
+def make_factors(x, mod):
     cnt = 0
     r = 0
     while r == 0:
