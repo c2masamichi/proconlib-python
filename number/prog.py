@@ -1,3 +1,19 @@
+from math import gcd
+from functools import reduce
+
+
+def gcd_list(x):
+    return reduce(gcd, x)
+
+
+def lcm(x, y):
+    return x * y // gcd(x, y)
+
+
+def lcm_list(x):
+    return reduce(lcm, x)
+
+
 def is_prime(x):
     if x < 2:
         return False

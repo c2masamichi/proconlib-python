@@ -6,6 +6,32 @@ import prog
 @pytest.mark.parametrize(
     ('x', 'expected'),
     (
+        ([3], 3),
+        ([8, 2], 2),
+        ([6, 15, 9], 3),
+        ([17, 13, 7], 1),
+    ),
+)
+def test_gcd_list(x, expected):
+    assert prog.gcd_list(x) == expected
+
+
+@pytest.mark.parametrize(
+    ('x', 'expected'),
+    (
+        ([3], 3),
+        ([2, 4], 4),
+        ([2, 3, 5], 30),
+        ([10, 6, 8], 120),
+    ),
+)
+def test_lcm_list(x, expected):
+    assert prog.lcm_list(x) == expected
+
+
+@pytest.mark.parametrize(
+    ('x', 'expected'),
+    (
         (1, False),
         (2, True),
         (4, False),
