@@ -60,7 +60,10 @@ def test_count_factors(x, mod, expected):
 @pytest.mark.parametrize(
     ('x', 'expected'),
     (
+        (3, [1, 3]),
         (6, [1, 2, 3, 6]),
+        (16, [1, 2, 4, 8, 16]),
+        (25, [1, 5, 25]),
     ),
 )
 def test_make_divisors(x, expected):

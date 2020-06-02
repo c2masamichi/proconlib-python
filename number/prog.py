@@ -47,6 +47,7 @@ def make_divisors(x):
         q, r = divmod(x, i)
         if r == 0:
             divisor.append(i)
-            divisor.append(q)
+            if q != i:
+                divisor.append(q)
         i += 1
     return sorted(divisor)
