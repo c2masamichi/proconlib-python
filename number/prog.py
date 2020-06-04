@@ -41,6 +41,9 @@ def count_factors(x, mod):
 
 
 def make_divisors(x):
+    if x == 1:
+        return [1]
+
     divisor = [1, x]
     i = 2
     while i * i <= x:
